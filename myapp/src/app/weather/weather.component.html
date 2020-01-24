@@ -1,0 +1,13 @@
+<main>
+  <div class="location">
+    <h2 class="timezone">{{ timezone }}</h2>
+    <sc-skycons [weather]="icon" [color]="'white'"></sc-skycons>
+  </div>
+  <div class="temperature">
+    <div class="degree-container">
+      <h2 (click)="toggleTemperature()">{{ temperature }}</h2>
+      <span>{{ measurement }}</span>
+    </div>
+    <h2>{{ summary }}</h2>
+  </div>
+</main>
