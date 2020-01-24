@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-require("dotenv").config();
+import { environment } from "../../environments/environment";
 
 @Component({
   selector: "app-weather",
@@ -47,7 +47,7 @@ export class WeatherComponent implements OnInit {
           long = position.coords.longitude;
           lat = position.coords.latitude;
 
-          var api_key = process.env.apiKey;
+          var api_key = environment.apiKey;
 
           const proxy = "https://cors-anywhere.herokuapp.com/";
           const apiKey = `${proxy}${api_key}${lat},${long}`;
